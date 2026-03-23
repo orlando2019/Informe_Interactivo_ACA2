@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ingeniería fiscal y mapa de calor regulatorio — Ley 2099 de 2021 aplicada a Nexus Vientos del Desierto">
+  <title>Pág. 3 — Ingeniería Fiscal | Nexus Renewables</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+
+  <div class="page-wrapper">
+    <a href="index.html" class="back-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Dashboard
+    </a>
+
+    <style>
+      .pag { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1.5rem 2rem; }
+
+      .heatmap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0.75rem 0 1.25rem; }
+      .hmap-panel { border-radius: var(--radius-md); border: 1px solid var(--border-subtle); overflow: hidden; background: var(--bg-card); }
+      .hmap-header { padding: 8px 12px; font-size: 12px; font-weight: 600; }
+      .hmap-header.before { background: rgba(239,68,68,0.1); color: #ff6b6b; }
+      .hmap-header.after { background: rgba(34,217,127,0.1); color: var(--neon-green); }
+      .hmap-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 12px; border-top: 1px solid var(--border-subtle); font-size: 12px; }
+      .hmap-row .risk-name { color: var(--text-secondary); flex: 1; }
+      .heat-badge { font-size: 11px; font-weight: 500; border-radius: var(--radius-md); padding: 2px 10px; min-width: 56px; text-align: center; }
+      .h-critical { background: rgba(239,68,68,0.85); color: #fff; }
+      .h-high { background: rgba(245,158,11,0.85); color: #000; }
+      .h-medium { background: rgba(250,199,117,0.75); color: #000; }
+      .h-low { background: rgba(34,217,127,0.25); color: var(--neon-green); }
+      .h-minimal { background: rgba(0,229,255,0.15); color: var(--neon-cyan); }
+
+      .fiscal-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 0.75rem 0; }
+      .fiscal-table th { background: var(--bg-surface); font-weight: 500; color: var(--text-secondary); padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border-subtle); font-size: 12px; }
+      .fiscal-table td { padding: 8px 10px; border-bottom: 1px solid var(--border-subtle); color: var(--text-primary); vertical-align: top; line-height: 1.5; }
+      .fiscal-table tr:last-child td { border-bottom: none; }
+      .fiscal-table .total-row td { font-weight: 600; background: rgba(34,217,127,0.08); color: var(--neon-green); }
+      .art-badge { font-size: 11px; background: var(--bg-surface); color: var(--text-secondary); border-radius: var(--radius-md); padding: 2px 7px; margin-right: 4px; }
+      .saving-val { font-weight: 600; color: var(--neon-green); }
+
+      .result-box { border-radius: var(--radius-md); padding: 1rem 1.25rem; background: rgba(34,217,127,0.06); border-left: 3px solid var(--neon-green); margin-top: 1rem; }
+      .result-box .r-title { font-size: 13px; font-weight: 500; color: var(--neon-green); margin-bottom: 8px; }
+      .result-nums { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 8px; }
+      .rnum { text-align: center; }
+      .rnum .val { font-size: 20px; font-weight: 600; color: var(--neon-green); }
+      .rnum .lbl { font-size: 11px; color: rgba(34,217,127,0.7); margin-top: 2px; }
+      .coverage-bar-wrap { margin-top: 12px; }
+      .coverage-bar-wrap .bar-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--neon-green); margin-bottom: 4px; }
+      .bar-bg { background: rgba(34,217,127,0.15); border-radius: 99px; height: 12px; overflow: hidden; }
+      .bar-fill { height: 100%; background: var(--neon-green); border-radius: 99px; }
+
+    </style>
+
+    <div class="pag">
+      <div class="page-label">Página 3 de 5</div>
+      <div class="page-title">Ingeniería fiscal y mapa de calor regulatorio</div>
+
+      <p class="body-text">La Ley 2099 de 2021 ofrece cuatro palancas fiscales simultáneas que, aplicadas correctamente, transforman el sobrecosto de USD $54M en una oportunidad de optimización financiera. A continuación se presenta el estado de riesgo legal antes y después de la intervención gerencial.</p>
+
+      <div class="section-title">3.1 Mapa de calor — riesgos legales antes y después</div>
+      <div class="heatmap-grid">
+        <div class="hmap-panel">
+          <div class="hmap-header before">Antes de intervención</div>
+          <div class="hmap-row"><span class="risk-name">Bloqueo comunitario</span><span class="heat-badge h-critical">Crítico</span></div>
+          <div class="hmap-row"><span class="risk-name">Sobrecosto materiales</span><span class="heat-badge h-critical">Crítico</span></div>
+          <div class="hmap-row"><span class="risk-name">Incumplimiento Consulta Previa</span><span class="heat-badge h-high">Alto</span></div>
+          <div class="hmap-row"><span class="risk-name">Pérdida acceso financiamiento ESG</span><span class="heat-badge h-high">Alto</span></div>
+          <div class="hmap-row"><span class="risk-name">Infracción GRI 411</span><span class="heat-badge h-medium">Medio</span></div>
+          <div class="hmap-row"><span class="risk-name">No uso incentivos Ley 2099</span><span class="heat-badge h-high">Alto</span></div>
+        </div>
+        <div class="hmap-panel">
+          <div class="hmap-header after">Después de intervención</div>
+          <div class="hmap-row"><span class="risk-name">Bloqueo comunitario</span><span class="heat-badge h-low">Bajo</span></div>
+          <div class="hmap-row"><span class="risk-name">Sobrecosto materiales</span><span class="heat-badge h-low">Bajo</span></div>
+          <div class="hmap-row"><span class="risk-name">Incumplimiento Consulta Previa</span><span class="heat-badge h-minimal">Mínimo</span></div>
+          <div class="hmap-row"><span class="risk-name">Pérdida acceso financiamiento ESG</span><span class="heat-badge h-minimal">Mínimo</span></div>
+          <div class="hmap-row"><span class="risk-name">Infracción GRI 411</span><span class="heat-badge h-minimal">Mínimo</span></div>
+          <div class="hmap-row"><span class="risk-name">No uso incentivos Ley 2099</span><span class="heat-badge h-minimal">Mínimo</span></div>
+        </div>
+      </div>
+
+      <!-- Gráfica: Desglose de beneficios fiscales -->
+      <div class="section-title">Desglose de beneficios fiscales — Ley 2099</div>
+      <div class="chart-container">
+        <canvas id="fiscalDonut"></canvas>
+      </div>
+
+      <div class="section-title">3.2 Cuadro de optimización tributaria — Ley 2099 de 2021</div>
+      <table class="fiscal-table">
+        <thead>
+          <tr>
+            <th>Incentivo</th>
+            <th>Artículo</th>
+            <th>Base de cálculo</th>
+            <th>Tasa</th>
+            <th>Ahorro / Beneficio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Exclusión de IVA sobre equipos y maquinaria elegibles</td>
+            <td><span class="art-badge">Art. 9</span>Ley 2099</td>
+            <td>USD $200M (turbinas + eléctrico)</td>
+            <td>19%</td>
+            <td><span class="saving-val">USD $38.0M</span><br><span style="font-size:11px;color:var(--text-secondary)">Alivio directo en caja desde día 1</span></td>
+          </tr>
+          <tr>
+            <td>Deducción especial de renta sobre inversión total</td>
+            <td><span class="art-badge">Art. 8</span>Ley 2099</td>
+            <td>50% × $270M = $135M deducible · Tasa renta 35%</td>
+            <td>50% inv.</td>
+            <td><span class="saving-val">USD $47.3M</span><br><span style="font-size:11px;color:var(--text-secondary)">Hasta 15 años · cert. UPME requerida</span></td>
+          </tr>
+          <tr>
+            <td>Depreciación acelerada de activos eólicos (año 1)</td>
+            <td><span class="art-badge">Art. 11</span>Ley 2099</td>
+            <td>33.33% vs 10% estándar · $200M activos · escudo fiscal</td>
+            <td>33.33%/año</td>
+            <td><span class="saving-val">USD $16.3M</span><br><span style="font-size:11px;color:var(--text-secondary)">Por año durante primeros 3 años</span></td>
+          </tr>
+          <tr>
+            <td>Exención aranceles importación turbinas</td>
+            <td><span class="art-badge">Art. 10</span>Ley 2099</td>
+            <td>$198M turbinas importadas × arancel ~5%</td>
+            <td>100% exento</td>
+            <td><span class="saving-val">USD $9.9M</span><br><span style="font-size:11px;color:var(--text-secondary)">Aviso DIAN 15 días hábiles antes</span></td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="4">Total paquete fiscal Ley 2099 (beneficio combinado)</td>
+            <td>USD $111.5M</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="result-box">
+        <div class="r-title">Resultado — los incentivos fiscales cubren el sobrecosto y generan excedente</div>
+        <div class="result-nums">
+          <div class="rnum"><div class="val">$54M</div><div class="lbl">Sobrecosto a cubrir (20% CAPEX)</div></div>
+          <div class="rnum"><div class="val">$111.5M</div><div class="lbl">Beneficio fiscal total Ley 2099</div></div>
+          <div class="rnum"><div class="val">$57.5M</div><div class="lbl">Excedente fiscal neto disponible</div></div>
+        </div>
+        <div class="coverage-bar-wrap">
+          <div class="bar-label"><span>Cobertura del sobrecosto por incentivos fiscales</span><span>206%</span></div>
+          <div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+  <script>
+    NexusCharts.create('fiscalDonut', {
+      type: 'doughnut',
+      data: {
+        labels: ['Exclusión IVA ($38M)', 'Deducción renta ($47.3M)', 'Depreciación acelerada ($16.3M)', 'Exención aranceles ($9.9M)'],
+        datasets: [{
+          data: [38.0, 47.3, 16.3, 9.9],
+          backgroundColor: [
+            'rgba(0,229,255,0.75)',
+            'rgba(61,139,253,0.75)',
+            'rgba(168,85,247,0.75)',
+            'rgba(34,217,127,0.75)'
+          ],
+          borderColor: '#12121a',
+          borderWidth: 3,
+          hoverOffset: 8
+        }]
+      },
+      options: {
+        cutout: '60%',
+        animation: { animateRotate: true, duration: 1200, easing: 'easeOutQuart' },
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { color: '#8888a0', padding: 12, font: { size: 11 }, usePointStyle: true, pointStyleWidth: 8 }
+          },
+          tooltip: {
+            callbacks: { label: ctx => ` USD $${ctx.parsed}M (${((ctx.parsed / 111.5) * 100).toFixed(0)}%)` }
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

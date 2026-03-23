@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Laboratorio de decisión multicriterio MCDA — 5 escenarios de inversión social para Nexus Vientos del Desierto">
+  <title>Pág. 2 — Laboratorio MCDA | Nexus Renewables</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+
+  <div class="page-wrapper">
+    <a href="index.html" class="back-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Dashboard
+    </a>
+
+    <style>
+      .pag { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1.5rem 2rem; }
+      .chart-wrap { background: var(--bg-surface); border-radius: var(--radius-md); padding: 1rem; margin: 0.75rem 0; position: relative; height: 280px; }
+      .mcda-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 0.75rem 0; }
+      .mcda-table th { background: var(--bg-surface); font-weight: 500; color: var(--text-secondary); padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border-subtle); font-size: 12px; }
+      .mcda-table td { padding: 8px 10px; border-bottom: 1px solid var(--border-subtle); color: var(--text-primary); }
+      .mcda-table tr.optimal { background: rgba(34,217,127,0.08); }
+      .mcda-table tr.optimal td { color: var(--neon-green); font-weight: 500; }
+      .mcda-table tr:last-child td { border-bottom: none; }
+      .tag-opt { font-size: 11px; background: var(--neon-green); color: #000; border-radius: var(--radius-md); padding: 2px 8px; margin-left: 6px; font-weight: 600; }
+      .conclusion-box { border: 1px solid var(--border-subtle); border-left: 3px solid var(--neon-green); border-radius: var(--radius-md); padding: 1rem 1.25rem; margin-top: 1rem; background: var(--bg-card); }
+      .conclusion-box .c-title { font-size: 13px; font-weight: 500; color: var(--neon-green); margin-bottom: 6px; }
+      .conclusion-box p { font-size: 14px; color: var(--text-primary); line-height: 1.7; margin: 0; }
+      .metrics-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0.75rem 0; }
+      .metric-card { background: var(--bg-surface); border-radius: var(--radius-md); padding: 0.85rem; text-align: center; border: 1px solid var(--border-subtle); }
+      .metric-card .m-val { font-size: 22px; font-weight: 600; color: var(--text-primary); }
+      .metric-card .m-val.green { color: var(--neon-green); }
+      .metric-card .m-val.red { color: var(--neon-red); }
+      .metric-card .m-lbl { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
+    </style>
+
+    <div class="pag">
+      <div class="page-label">Página 2 de 5</div>
+      <div class="page-title">Laboratorio de decisión multicriterio — MCDA</div>
+
+      <p class="body-text">El modelo MCDA evalúa cinco escenarios de inversión social frente a la probabilidad de bloqueo comunitario, cuantificando el impacto en el VPN esperado del proyecto. El eje de análisis central es: cada dólar invertido en comunidad reduce exponencialmente el costo esperado de parálisis.</p>
+
+      <div class="section-title">2.1 Gráfico de dispersión — Inversión social vs. mejora del VPN</div>
+      <div class="chart-wrap">
+        <canvas id="scatterChart"></canvas>
+      </div>
+
+      <div class="section-title">2.2 Matriz de análisis de sensibilidad</div>
+      <table class="mcda-table">
+        <thead>
+          <tr>
+            <th>Escenario</th>
+            <th>Inversión social</th>
+            <th>Riesgo bloqueo</th>
+            <th>Costo esperado paro</th>
+            <th>CAPEX efectivo</th>
+            <th>Mejora VPN</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A — Sin intervención</td>
+            <td>USD $0</td>
+            <td>85%</td>
+            <td>USD $38.3M</td>
+            <td>USD $362.3M</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>B — Intervención mínima</td>
+            <td>USD $0.5M</td>
+            <td>65%</td>
+            <td>USD $29.3M</td>
+            <td>USD $353.8M</td>
+            <td>+USD $8.5M</td>
+          </tr>
+          <tr>
+            <td>C — Intervención media</td>
+            <td>USD $1.0M</td>
+            <td>40%</td>
+            <td>USD $18.0M</td>
+            <td>USD $343.0M</td>
+            <td>+USD $19.3M</td>
+          </tr>
+          <tr class="optimal">
+            <td>D — Intervención óptima <span class="tag-opt">NEXUS</span></td>
+            <td>USD $1.5M</td>
+            <td>17%</td>
+            <td>USD $7.7M</td>
+            <td>USD $333.2M</td>
+            <td>+USD $29.1M</td>
+          </tr>
+          <tr>
+            <td>E — Intervención excedida</td>
+            <td>USD $2.0M</td>
+            <td>8%</td>
+            <td>USD $3.6M</td>
+            <td>USD $329.6M</td>
+            <td>+USD $32.7M</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="metrics-row">
+        <div class="metric-card">
+          <div class="m-val green">19.3×</div>
+          <div class="m-lbl">Retorno de la inversión social (ROI: $29.1M / $1.5M)</div>
+        </div>
+        <div class="metric-card">
+          <div class="m-val red">-68%</div>
+          <div class="m-lbl">Reducción del riesgo de bloqueo (85% → 17%)</div>
+        </div>
+        <div class="metric-card">
+          <div class="m-val green">+USD $29.1M</div>
+          <div class="m-lbl">Mejora en VPN esperado con $1.5M social</div>
+        </div>
+      </div>
+
+      <div class="section-title">2.3 Conclusión — argumento financiero para la junta</div>
+      <div class="conclusion-box">
+        <div class="c-title">El caso financiero es contundente</div>
+        <p>Invertir USD $1.5M en infraestructura social comunitaria genera una mejora de USD $29.1M en el VPN esperado del proyecto, equivalente a un ROI de 19.3x. Renunciar a esta inversión, bajo la hipótesis conservadora de un bloqueo de 6 meses, implica una destrucción de valor de USD $38.3M en costos de paralización. La sostenibilidad fuerte no es un gasto ético: es la decisión financieramente óptima para Nexus Renewables (Sostenibilidad Estratégica CUN, 2025; IRENA, 2024).</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+  <script>
+    const data = [
+      { x: 0, y: 0, label: 'A — Sin intervención' },
+      { x: 0.5, y: 8.5, label: 'B — Mínima' },
+      { x: 1.0, y: 19.3, label: 'C — Media' },
+      { x: 1.5, y: 29.1, label: 'D — Óptima (Nexus)' },
+      { x: 2.0, y: 32.7, label: 'E — Excedida' }
+    ];
+
+    NexusCharts.create('scatterChart', {
+      type: 'scatter',
+      data: {
+        datasets: [{
+          label: 'Escenarios MCDA',
+          data: data.map(d => ({ x: d.x, y: d.y })),
+          backgroundColor: data.map((_, i) => i === 3 ? '#22d97f' : 'rgba(0,229,255,0.5)'),
+          pointRadius: data.map((_, i) => i === 3 ? 12 : 8),
+          pointHoverRadius: 14,
+          pointBorderColor: data.map((_, i) => i === 3 ? '#22d97f' : 'rgba(0,229,255,0.3)'),
+          pointBorderWidth: 2
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => {
+                const d = data[ctx.dataIndex];
+                return `${d.label}: inv=$${d.x}M → VPN +$${d.y}M`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            title: { display: true, text: 'Inversión social (USD M)', color: '#8888a0', font: { size: 11 } },
+            min: -0.1, max: 2.3,
+            grid: { color: 'rgba(255,255,255,0.04)' },
+            ticks: { color: '#5a5a72', font: { size: 10 }, callback: v => '$' + v + 'M' }
+          },
+          y: {
+            title: { display: true, text: 'Mejora en VPN esperado (USD M)', color: '#8888a0', font: { size: 11 } },
+            min: -3, max: 38,
+            grid: { color: 'rgba(255,255,255,0.04)' },
+            ticks: { color: '#5a5a72', font: { size: 10 }, callback: v => '+$' + v + 'M' }
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

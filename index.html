@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dashboard interactivo del informe Nexus Renewables — Vientos del Desierto. Análisis estratégico, MCDA, ingeniería fiscal, gobernanza ESG y conclusiones."
+    />
+    <title>Nexus Renewables — Dashboard Estratégico</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- ── Fondo animado ── -->
+    <div class="bg-grid"></div>
+
+    <!-- ── Header ── -->
+    <header class="dashboard-header">
+      <div class="header-badge">
+        <span class="dot"></span>
+        Informe interactivo · ACA2
+      </div>
+      <h1>Nexus Renewables</h1>
+      <p class="subtitle">
+        Vientos del Desierto — 180 MW · Análisis estratégico de sostenibilidad,
+        inversión social y optimización fiscal para la transición energética
+        justa.
+      </p>
+    </header>
+
+    <!-- ── KPI Strip ── -->
+    <section class="kpi-strip">
+      <div class="kpi-item animate-in">
+        <div class="kpi-value cyan">180 MW</div>
+        <div class="kpi-label">Capacidad instalada</div>
+      </div>
+      <div class="kpi-item animate-in">
+        <div class="kpi-value green">19.3×</div>
+        <div class="kpi-label">ROI inversión social</div>
+      </div>
+      <div class="kpi-item animate-in">
+        <div class="kpi-value purple">$111.5M</div>
+        <div class="kpi-label">Beneficio fiscal total</div>
+      </div>
+      <div class="kpi-item animate-in">
+        <div class="kpi-value amber">-68%</div>
+        <div class="kpi-label">Reducción riesgo bloqueo</div>
+      </div>
+    </section>
+
+    <!-- ── Navigation Cards ── -->
+    <section class="cards-section">
+      <div class="section-label">Secciones del informe</div>
+      <div class="cards-grid">
+        <!-- Card 1 — Resumen Ejecutivo -->
+        <a
+          href="pag1_resumen_ejecutivo_nexus.html"
+          class="nav-card animate-in"
+          data-color="cyan"
+          id="card-resumen"
+        >
+          <div class="card-top">
+            <div class="card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10 9 9 9 8 9" />
+              </svg>
+            </div>
+            <div class="card-meta">
+              <div class="card-page">Página 1</div>
+              <div class="card-title">Resumen Ejecutivo</div>
+            </div>
+          </div>
+          <div class="card-desc">
+            Marco estratégico del proyecto, contexto de crisis (sobrecosto +$54M
+            y bloqueo comunitario), objetivos del informe y justificación de
+            sostenibilidad fuerte.
+          </div>
+          <div class="card-tags">
+            <span class="card-tag">Crisis financiera</span>
+            <span class="card-tag">Capital social</span>
+            <span class="card-tag">Sostenibilidad</span>
+          </div>
+          <div class="card-arrow">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Card 2 — MCDA -->
+        <a
+          href="pag2_mcda_nexus.html"
+          class="nav-card animate-in"
+          data-color="green"
+          id="card-mcda"
+        >
+          <div class="card-top">
+            <div class="card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="18" y1="20" x2="18" y2="10" />
+                <line x1="12" y1="20" x2="12" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="14" />
+              </svg>
+            </div>
+            <div class="card-meta">
+              <div class="card-page">Página 2</div>
+              <div class="card-title">Laboratorio MCDA</div>
+            </div>
+          </div>
+          <div class="card-desc">
+            Análisis multicriterio de 5 escenarios de inversión social. Gráfico
+            de dispersión interactivo, matriz de sensibilidad y ROI de 19.3×
+            sobre mejora en VPN.
+          </div>
+          <div class="card-tags">
+            <span class="card-tag">Chart.js</span>
+            <span class="card-tag">5 escenarios</span>
+            <span class="card-tag">VPN +$29.1M</span>
+          </div>
+          <div class="card-arrow">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Card 3 — Ingeniería Fiscal -->
+        <a
+          href="pag3_ingenieria_fiscal_nexus.html"
+          class="nav-card animate-in"
+          data-color="blue"
+          id="card-fiscal"
+        >
+          <div class="card-top">
+            <div class="card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                <line x1="1" y1="10" x2="23" y2="10" />
+              </svg>
+            </div>
+            <div class="card-meta">
+              <div class="card-page">Página 3</div>
+              <div class="card-title">Ingeniería Fiscal</div>
+            </div>
+          </div>
+          <div class="card-desc">
+            Mapa de calor regulatorio, cuadro de optimización tributaria Ley
+            2099 y demostración de que los incentivos cubren 206% del sobrecosto
+            ($111.5M vs $54M).
+          </div>
+          <div class="card-tags">
+            <span class="card-tag">Ley 2099</span>
+            <span class="card-tag">Heatmap</span>
+            <span class="card-tag">$111.5M beneficio</span>
+          </div>
+          <div class="card-arrow">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Card 4 — Gobernanza ESG -->
+        <a
+          href="pag4_gobernanza_esg_nexus.html"
+          class="nav-card animate-in"
+          data-color="purple"
+          id="card-esg"
+        >
+          <div class="card-top">
+            <div class="card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <div class="card-meta">
+              <div class="card-page">Página 4</div>
+              <div class="card-title">Gobernanza ESG</div>
+            </div>
+          </div>
+          <div class="card-desc">
+            Estructura organizacional con comité ESG integrado, Sustainability
+            Balanced Scorecard con 5 indicadores GRI y mecanismos
+            anti-corrupción del fondo social.
+          </div>
+          <div class="card-tags">
+            <span class="card-tag">GRI 302/304/411</span>
+            <span class="card-tag">SBSC</span>
+            <span class="card-tag">Anti-corrupción</span>
+          </div>
+          <div class="card-arrow">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Card 5 — Conclusiones -->
+        <a
+          href="pag5_conclusiones_pitch_nexus.html"
+          class="nav-card animate-in"
+          data-color="amber"
+          id="card-conclusiones"
+        >
+          <div class="card-top">
+            <div class="card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
+            </div>
+            <div class="card-meta">
+              <div class="card-page">Página 5</div>
+              <div class="card-title">Conclusiones y Pitch</div>
+            </div>
+          </div>
+          <div class="card-desc">
+            Respuesta a la pregunta orientadora, síntesis de resultados, hoja de
+            ruta a 5 años, reflexión gerencial y enlace al video pitch de
+            defensa oral.
+          </div>
+          <div class="card-tags">
+            <span class="card-tag">Hoja de ruta</span>
+            <span class="card-tag">Video pitch</span>
+            <span class="card-tag">Reflexión</span>
+          </div>
+          <div class="card-arrow">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── Charts Section ── -->
+    <section class="chart-section">
+      <div class="section-label">Indicadores clave</div>
+      <div class="chart-grid">
+        <div class="chart-card animate-in">
+          <div class="chart-card-header">
+            <span class="chart-card-title"
+              >Inversión Social vs. Mejora VPN</span
+            >
+            <span class="chart-card-badge badge-green">MCDA</span>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="chartScatter"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card animate-in">
+          <div class="chart-card-header">
+            <span class="chart-card-title">Beneficios Fiscales — Ley 2099</span>
+            <span class="chart-card-badge badge-cyan">Fiscal</span>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="chartFiscal"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card animate-in">
+          <div class="chart-card-header">
+            <span class="chart-card-title"
+              >Reducción de Riesgo por Escenario</span
+            >
+            <span class="chart-card-badge badge-green">Riesgo</span>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="chartRisk"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Equipo ACA2 ── -->
+    <section class="chart-section">
+      <div class="section-label">Equipo de trabajo</div>
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 1rem;
+        "
+      >
+        <div
+          class="kpi-item animate-in"
+          style="
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+          "
+        >
+          <div
+            style="
+              width: 42px;
+              height: 42px;
+              border-radius: 50%;
+              background: rgba(0, 229, 255, 0.12);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+            "
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="var(--neon-cyan)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+          <div>
+            <div
+              style="
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--text-primary);
+              "
+            >
+              Orlando M. Ospino H.
+            </div>
+            <div style="font-size: 11px; color: var(--neon-cyan)">
+              Integrante ACA2
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="kpi-item animate-in"
+          style="
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+          "
+        >
+          <div
+            style="
+              width: 42px;
+              height: 42px;
+              border-radius: 50%;
+              background: rgba(34, 217, 127, 0.12);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+            "
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="var(--neon-green)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+          <div>
+            <div
+              style="
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--text-primary);
+              "
+            >
+              Ildefonso J. Jiménez De La Rosa
+            </div>
+            <div style="font-size: 11px; color: var(--neon-green)">
+              Integrante ACA2
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="kpi-item animate-in"
+          style="
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+          "
+        >
+          <div
+            style="
+              width: 42px;
+              height: 42px;
+              border-radius: 50%;
+              background: rgba(168, 85, 247, 0.12);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+            "
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="var(--neon-purple)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+          <div>
+            <div
+              style="
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--text-primary);
+              "
+            >
+              Leidy T. Pérez Rodríguez
+            </div>
+            <div style="font-size: 11px; color: var(--neon-purple)">
+              Integrante ACA2
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="kpi-item animate-in"
+          style="
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+          "
+        >
+          <div
+            style="
+              width: 42px;
+              height: 42px;
+              border-radius: 50%;
+              background: rgba(245, 158, 11, 0.12);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+            "
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="var(--neon-amber)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+          <div>
+            <div
+              style="
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--text-primary);
+              "
+            >
+              Edward F. Torres Rodríguez
+            </div>
+            <div style="font-size: 11px; color: var(--neon-amber)">
+              Integrante ACA2
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Footer ── -->
+    <footer class="dashboard-footer">
+      <p>
+        Nexus Renewables — Vientos del Desierto · ACA2 Sostenibilidad
+        Estratégica CUN 2025
+      </p>
+      <p style="margin-top: 6px; color: #8888a0">
+        Desarrollado por
+        <span style="color: var(--neon-cyan); font-weight: 500"
+          >Orlando Ospino</span
+        >
+      </p>
+    </footer>
+
+    <!-- ── Chart.js ── -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script>
+      /* ==========================================================
+     Chart.js — Gráficas interactivas del Dashboard
+     ========================================================== */
+
+      // Configuración global para tema oscuro
+      Chart.defaults.color = "#8888a0";
+      Chart.defaults.borderColor = "rgba(255,255,255,0.06)";
+      Chart.defaults.font.family = "'Inter', sans-serif";
+
+      /* ── 1. Scatter: Inversión Social vs. VPN ── */
+      const scatterData = [
+        { x: 0, y: 0, label: "A — Sin intervención" },
+        { x: 0.5, y: 8.5, label: "B — Mínima" },
+        { x: 1.0, y: 19.3, label: "C — Media" },
+        { x: 1.5, y: 29.1, label: "D — Óptima (Nexus)" },
+        { x: 2.0, y: 32.7, label: "E — Excedida" },
+      ];
+
+      new Chart(document.getElementById("chartScatter"), {
+        type: "scatter",
+        data: {
+          datasets: [
+            {
+              label: "Escenarios MCDA",
+              data: scatterData.map((d) => ({ x: d.x, y: d.y })),
+              backgroundColor: scatterData.map((_, i) =>
+                i === 3 ? "#22d97f" : "rgba(0,229,255,0.5)",
+              ),
+              pointRadius: scatterData.map((_, i) => (i === 3 ? 12 : 8)),
+              pointHoverRadius: 14,
+              pointBorderColor: scatterData.map((_, i) =>
+                i === 3 ? "#22d97f" : "rgba(0,229,255,0.3)",
+              ),
+              pointBorderWidth: 2,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          animation: { duration: 1200, easing: "easeOutQuart" },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: "#1a1a2a",
+              titleColor: "#e8e8f0",
+              bodyColor: "#8888a0",
+              borderColor: "rgba(0,229,255,0.2)",
+              borderWidth: 1,
+              cornerRadius: 8,
+              padding: 12,
+              callbacks: {
+                label: (ctx) => {
+                  const d = scatterData[ctx.dataIndex];
+                  return `${d.label}: inv $${d.x}M → VPN +$${d.y}M`;
+                },
+              },
+            },
+          },
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: "Inversión social (USD M)",
+                color: "#8888a0",
+                font: { size: 11 },
+              },
+              min: -0.1,
+              max: 2.3,
+              grid: { color: "rgba(255,255,255,0.04)" },
+              ticks: {
+                callback: (v) => "$" + v + "M",
+                color: "#5a5a72",
+                font: { size: 10 },
+              },
+            },
+            y: {
+              title: {
+                display: true,
+                text: "Mejora VPN (USD M)",
+                color: "#8888a0",
+                font: { size: 11 },
+              },
+              min: -3,
+              max: 38,
+              grid: { color: "rgba(255,255,255,0.04)" },
+              ticks: {
+                callback: (v) => "+$" + v + "M",
+                color: "#5a5a72",
+                font: { size: 10 },
+              },
+            },
+          },
+        },
+      });
+
+      /* ── 2. Bar: Beneficios Fiscales ── */
+      new Chart(document.getElementById("chartFiscal"), {
+        type: "bar",
+        data: {
+          labels: [
+            "Exclusión IVA",
+            "Deducción renta",
+            "Depreciación acel.",
+            "Exención aranceles",
+          ],
+          datasets: [
+            {
+              label: "Ahorro (USD M)",
+              data: [38.0, 47.3, 16.3, 9.9],
+              backgroundColor: [
+                "rgba(0,229,255,0.7)",
+                "rgba(61,139,253,0.7)",
+                "rgba(168,85,247,0.7)",
+                "rgba(34,217,127,0.7)",
+              ],
+              borderColor: [
+                "rgba(0,229,255,0.9)",
+                "rgba(61,139,253,0.9)",
+                "rgba(168,85,247,0.9)",
+                "rgba(34,217,127,0.9)",
+              ],
+              borderWidth: 1,
+              borderRadius: 6,
+              borderSkipped: false,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          animation: { duration: 1200, easing: "easeOutQuart" },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: "#1a1a2a",
+              titleColor: "#e8e8f0",
+              bodyColor: "#8888a0",
+              borderColor: "rgba(61,139,253,0.2)",
+              borderWidth: 1,
+              cornerRadius: 8,
+              padding: 12,
+              callbacks: {
+                label: (ctx) => `USD $${ctx.parsed.y}M`,
+              },
+            },
+          },
+          scales: {
+            x: {
+              grid: { display: false },
+              ticks: { color: "#5a5a72", font: { size: 10 } },
+            },
+            y: {
+              grid: { color: "rgba(255,255,255,0.04)" },
+              ticks: {
+                callback: (v) => "$" + v + "M",
+                color: "#5a5a72",
+                font: { size: 10 },
+              },
+            },
+          },
+        },
+      });
+
+      /* ── 3. Line: Reducción de riesgo ── */
+      new Chart(document.getElementById("chartRisk"), {
+        type: "line",
+        data: {
+          labels: [
+            "A — $0",
+            "B — $0.5M",
+            "C — $1.0M",
+            "D — $1.5M",
+            "E — $2.0M",
+          ],
+          datasets: [
+            {
+              label: "Riesgo bloqueo (%)",
+              data: [85, 65, 40, 17, 8],
+              borderColor: "#a855f7",
+              backgroundColor: "rgba(168,85,247,0.1)",
+              fill: true,
+              tension: 0.4,
+              pointBackgroundColor: [
+                "#ef4444",
+                "#f59e0b",
+                "#f59e0b",
+                "#22d97f",
+                "#22d97f",
+              ],
+              pointBorderColor: "#1a1a2a",
+              pointBorderWidth: 2,
+              pointRadius: 6,
+              pointHoverRadius: 9,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          animation: { duration: 1200, easing: "easeOutQuart" },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: "#1a1a2a",
+              titleColor: "#e8e8f0",
+              bodyColor: "#8888a0",
+              borderColor: "rgba(168,85,247,0.2)",
+              borderWidth: 1,
+              cornerRadius: 8,
+              padding: 12,
+              callbacks: {
+                label: (ctx) => `Riesgo: ${ctx.parsed.y}%`,
+              },
+            },
+          },
+          scales: {
+            x: {
+              grid: { display: false },
+              ticks: { color: "#5a5a72", font: { size: 10 } },
+            },
+            y: {
+              min: 0,
+              max: 100,
+              grid: { color: "rgba(255,255,255,0.04)" },
+              ticks: {
+                callback: (v) => v + "%",
+                color: "#5a5a72",
+                font: { size: 10 },
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

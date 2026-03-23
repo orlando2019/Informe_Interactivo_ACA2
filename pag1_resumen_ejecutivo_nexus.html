@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resumen ejecutivo y marco estratégico — Proyecto Nexus Vientos del Desierto 180 MW">
+  <title>Pág. 1 — Resumen Ejecutivo | Nexus Renewables</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+
+  <div class="page-wrapper">
+    <a href="index.html" class="back-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Dashboard
+    </a>
+
+    <!-- ── Contenido original (adaptado) ── -->
+    <style>
+      .pag { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1.5rem 2rem; }
+      .crisis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0.75rem 0 1.25rem; }
+      .crisis-card { border-radius: var(--radius-md); padding: 0.85rem 1rem; border: 1px solid var(--border-subtle); }
+      .crisis-card.red { background: rgba(239,68,68,0.08); border-left: 3px solid var(--neon-red); }
+      .crisis-card.amber { background: rgba(245,158,11,0.08); border-left: 3px solid var(--neon-amber); }
+      .crisis-card .c-label { font-size: 11px; font-weight: 500; margin-bottom: 4px; }
+      .crisis-card.red .c-label { color: #ff6b6b; }
+      .crisis-card.amber .c-label { color: #fbbf24; }
+      .crisis-card .c-value { font-size: 22px; font-weight: 600; }
+      .crisis-card.red .c-value { color: #ff6b6b; }
+      .crisis-card.amber .c-value { color: #fbbf24; }
+      .crisis-card .c-desc { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+      .obj-list { margin: 0 0 1rem; padding: 0; list-style: none; }
+      .obj-list li { display: flex; gap: 10px; font-size: 14px; color: var(--color-text-primary); line-height: 1.6; padding: 8px 0; border-bottom: 1px solid var(--color-border-tertiary); }
+      .obj-list li:last-child { border-bottom: none; }
+      .obj-num { font-size: 12px; font-weight: 600; color: var(--neon-green); background: rgba(34,217,127,0.12); border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+      .sost-box { background: var(--bg-surface); border-radius: var(--radius-md); padding: 1rem 1.25rem; border-left: 3px solid var(--neon-green); margin-top: 0.5rem; }
+      .sost-box .quote { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; margin: 0 0 0.5rem; }
+      .sost-box .ref { font-size: 12px; color: var(--text-secondary); font-style: italic; }
+      .compare-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 0.75rem; }
+      .compare-card { border-radius: var(--radius-md); padding: 0.85rem 1rem; background: var(--bg-card); border: 1px solid var(--border-subtle); }
+      .compare-card .c-head { font-size: 12px; font-weight: 600; margin-bottom: 6px; }
+      .compare-card.neg .c-head { color: #ff6b6b; }
+      .compare-card.pos .c-head { color: var(--neon-green); }
+      .compare-card ul { margin: 0; padding-left: 1rem; }
+      .compare-card ul li { font-size: 12px; color: var(--text-secondary); line-height: 1.6; border-bottom: none; padding: 2px 0; }
+    </style>
+
+    <div class="pag">
+      <div class="page-label">Página 1 de 5</div>
+      <div class="page-title">Resumen ejecutivo y marco estratégico</div>
+
+      <div class="section-title">1.1 Contexto de crisis — Proyecto Nexus-Vientos del Desierto</div>
+      <p class="body-text">El proyecto Nexus-Vientos del Desierto (180 MW onshore, 60 turbinas de 3 MW, CAPEX base USD $270M) enfrenta simultáneamente dos crisis que amenazan su viabilidad: un sobrecosto del 20% en materiales por disrupciones en la cadena de suministro global, y un bloqueo comunitario activo que paraliza las operaciones de campo. Este escenario replica fielmente lo ocurrido con Windpeshi (Enel, La Guajira), donde 33 bloqueos entre 2022-2023 detuvieron el 60% de las jornadas laborales hasta la suspensión indefinida del proyecto (El País, 2023).</p>
+
+      <div class="crisis-grid">
+        <div class="crisis-card red">
+          <div class="c-label">Crisis financiera — sobrecosto</div>
+          <div class="c-value">+USD $54M</div>
+          <div class="c-desc">20% sobre CAPEX base · CAPEX crisis: $324M</div>
+        </div>
+        <div class="crisis-card amber">
+          <div class="c-label">Crisis social — costo del bloqueo</div>
+          <div class="c-value">USD $45M</div>
+          <div class="c-desc">6 meses × $250K/día · riesgo de $91M a 12 meses</div>
+        </div>
+      </div>
+
+      <!-- Gráfica: Impacto comparativo CAPEX -->
+      <div class="section-title">Impacto en CAPEX — comparativa de escenarios</div>
+      <div class="chart-container">
+        <canvas id="capexChart"></canvas>
+      </div>
+
+      <div class="section-title">1.2 Objetivos del informe de consultoría</div>
+      <ul class="obj-list">
+        <li><span class="obj-num">1</span>Cuantificar el impacto financiero de la inversión social de USD $1.5M en la reducción del riesgo operativo y la mejora del VPN mediante análisis multicriterio (MCDA).</li>
+        <li><span class="obj-num">2</span>Diseñar una estrategia de ingeniería fiscal que aplique simultáneamente los incentivos de la Ley 2099 de 2021 para absorber los sobrecostos del CAPEX.</li>
+        <li><span class="obj-num">3</span>Proponer una estructura de gobernanza corporativa basada en indicadores GRI 302, 304 y 411 que garantice la licencia social y el acceso a financiamiento internacional ESG.</li>
+      </ul>
+
+      <div class="section-title">1.3 Justificación de sostenibilidad fuerte — el capital social es insustituible</div>
+      <div class="sost-box">
+        <p class="quote">Bajo el paradigma de la Sostenibilidad Fuerte, la estabilidad financiera es indisociable de la integridad de los ecosistemas y la cohesión social. La inversión social trasciende la filantropía para convertirse en una palanca de reducción de riesgos; el capital natural y social no puede ser compensado retroactivamente con dinero (Sostenibilidad Estratégica CUN, 2025, pág. 1).</p>
+        <p class="ref">Sustento teórico: Informe Brundtland (1987) · Paradigma CUN (G3) · Elkington — Triple Bottom Line</p>
+      </div>
+
+      <div class="compare-row">
+        <div class="compare-card neg">
+          <div class="c-head">Escenario sin inversión social</div>
+          <ul>
+            <li>Bloqueo 6 meses → -USD $45M</li>
+            <li>TIR cae de 10% a ~4%</li>
+            <li>Payback se extiende a 15+ años</li>
+            <li>Riesgo de suspensión indefinida</li>
+          </ul>
+        </div>
+        <div class="compare-card pos">
+          <div class="c-head">Escenario con inversión social</div>
+          <ul>
+            <li>USD $1.5M → licencia social activa</li>
+            <li>TIR se sostiene en ~10%</li>
+            <li>Payback 8–11 años</li>
+            <li>Acceso a créditos ESG internacionales</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+  <script>
+    NexusCharts.create('capexChart', {
+      type: 'bar',
+      data: {
+        labels: ['CAPEX Base', 'Sobrecosto', 'Costo bloqueo 6m', 'CAPEX Crisis Total'],
+        datasets: [{
+          label: 'USD Millones',
+          data: [270, 54, 45, 369],
+          backgroundColor: [
+            'rgba(0,229,255,0.6)',
+            'rgba(239,68,68,0.6)',
+            'rgba(245,158,11,0.6)',
+            'rgba(168,85,247,0.6)'
+          ],
+          borderColor: [
+            'rgba(0,229,255,0.9)',
+            'rgba(239,68,68,0.9)',
+            'rgba(245,158,11,0.9)',
+            'rgba(168,85,247,0.9)'
+          ],
+          borderWidth: 1,
+          borderRadius: 6,
+          borderSkipped: false
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: { label: ctx => `USD $${ctx.parsed.y}M` }
+          }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: '#5a5a72', font: { size: 10 } } },
+          y: {
+            grid: { color: 'rgba(255,255,255,0.04)' },
+            ticks: { callback: v => '$' + v + 'M', color: '#5a5a72', font: { size: 10 } }
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
